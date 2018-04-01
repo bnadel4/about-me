@@ -109,6 +109,14 @@ while(guessesRemaining > 0) {
   var yearResponse = parseInt(prompt('What year was i born in?')); 
   guessesRemaining--;
 
+  if (yearResponse < 1993) {
+    alert('im a little younger...');
+  }
+
+  if (yearResponse > 1993) {
+    alert('haha thats the botox talkin');
+  }
+
   if (yearResponse === 1993) {
     alert('thats right!');
     console.log(yearResponse);
