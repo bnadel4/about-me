@@ -102,40 +102,57 @@
 // }
 
 
+// QUESTION 6 
 
-var guessesRemaining = 4;
+// var guessesRemaining = 4;
 
-while(guessesRemaining > 0) {
-  var yearResponse = parseInt(prompt('What year was i born in?')); 
-  guessesRemaining--;
+// while(guessesRemaining > 0) {
+//   var yearResponse = parseInt(prompt('What year was i born in?')); 
+//   guessesRemaining--;
 
-  if (yearResponse < 1993) {
-    alert('im a little younger...');
-  }
+//   if (yearResponse < 1993) {
+//     alert('im a little younger...');
+//   }
 
-  if (yearResponse > 1993) {
-    alert('haha thats the botox talkin');
-  }
+//   if (yearResponse > 1993) {
+//     alert('haha thats the botox talkin');
+//   }
 
-  if (yearResponse === 1993) {
-    alert('thats right!');
-    console.log(yearResponse);
-    break;
+//   if (yearResponse === 1993) {
+//     alert('thats right!');
+//     console.log(yearResponse);
+//     break;
     
+//   }
+
+// }
+
+
+// QUESTION 7
+
+// As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
+
+
+var favoriteColors = ['red', 'green', 'blue'];
+
+var guessesRemainingColors = 2;
+
+while(guessesRemainingColors > 0) {
+  
+  var colorsResponse = prompt('What is one of my favorite colors?');
+  console.log('colorsResponse', colorsResponse);
+  guessesRemainingColors--;
+
+  for(var i = 0; i < favoriteColors.length; i++) {
+    console.log(favoriteColors[i]);
+  
+    if(colorsResponse === favoriteColors[i]) {
+      guessesRemainingColors = -1; 
+      alert('good going');
+      break;
+    }
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
