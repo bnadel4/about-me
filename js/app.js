@@ -135,7 +135,7 @@
 
 var favoriteColors = ['red', 'green', 'blue'];
 
-var guessesRemainingColors = 2;
+var guessesRemainingColors = 6;
 
 while(guessesRemainingColors > 0) {
   
@@ -148,9 +148,15 @@ while(guessesRemainingColors > 0) {
   
     if(colorsResponse === favoriteColors[i]) {
       guessesRemainingColors = -1; 
-      alert('good going');
+      alert('good going the correct answers were red green and blue');
       break;
     }
+  }
+  if(guessesRemainingColors > 0) {
+    alert('you have ' + guessesRemainingColors + ' guesses left');
+  }
+  if(guessesRemainingColors === 0) {
+    alert('nice try red green and blue are some of my favorite colors');
   }
 }
 
