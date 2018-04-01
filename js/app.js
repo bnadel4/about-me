@@ -101,62 +101,31 @@
 
 // }
 
-var counter = 4;
-
-while (counter > 0) {
-  console.log('counter' , counter);
 
 
-  var birthYearResponse = parseInt(prompt('Which year was I born in?'));
+var guessesRemaining = 4;
 
-  if(birthYearResponse === 1993) {
-    alert('correct');
+while(guessesRemaining > 0) {
+  var yearResponse = parseInt(prompt('What year was i born in?')); 
+  guessesRemaining--;
+
+  if (yearResponse === 1993) {
+    alert('thats right!');
+    console.log(yearResponse);
     break;
-  }
-
-  if(birthYearResponse > 1993) {
-    counter--;
-    alert('thats very flattering you have ' + counter + ' more guesses');
-    
-  }
-
-  if(birthYearResponse < 1993) {
-    counter--;
-    alert('how dare you im not that old. take ' + counter + ' more guesses' );
-    
-  }
-
-  if(counter === 0) {
-    alert('your\'e out of guesses');
     
   }
 
 }
 
-// while(condition is met) {
-// //   do this stuff;
-// // }
-
-// var counter = 0;
-// var flag = true;
-
-// while(counter < 3 || flag === true) {
-//   counter++;
-//   console.log('The counter is: ' + counter);
 
 
 
 
-// var metResponse = prompt('Have we met before?').toLowerCase();
 
-// if(metResponse === 'yes' || metResponse === 'y') {
-//   alert('I don\'t doubt it ' + userName + '!');
-// }
-// console.log('Have we met?', metResponse);
 
-// if(metResponse === 'no' || metResponse === 'n') {
-//   alert('Wait why you on my site then? ' + userName + '?');
-// } 
+
+
 
 
 
